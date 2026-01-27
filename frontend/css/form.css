@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* แยกฟอนต์ตามที่ต้องการ: อังกฤษใช้ Helvetica, ไทยใช้ Noto Sans Thai */
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Noto Sans Thai', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.form-container {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    min-height: 100vh;
+    border: 1px solid #eee;
+    padding: 0 25px 40px;
+}
+
+/* ส่วนหัว */
+.form-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.back-link {
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+}
+
+.chevron-left {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #2b6edc;
+    border-bottom: 2px solid #2b6edc;
+    transform: rotate(45deg);
+}
+
+/* ฟอร์ม */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.required {
+    color: #d93025;
+    margin-left: 2px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px; /* ความโค้งมนตามรูป */
+    background-color: #fff;
+    font-size: 1rem;
+    color: #555;
+    outline: none;
+    appearance: none; /* ซ่อนลูกศรเดิม */
+}
+
+/* ใส่ลูกศรจำลองสำหรับ Select */
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%232b6edc' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+/* จัดเลย์เอาท์แถว (วันที่/เวลา) */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.col {
+    flex: 1;
+}
+
+.time-picker {
+    display: flex;
+    gap: 5px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+/* ปุ่มแนบไฟล์ */
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* ปุ่มยืนยัน */
+.footer-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background-color: #2b6edc;
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(43, 110, 220, 0.3);
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #1e52ab;
+    transform: translateY(-1px);
+}
+/* Container หลักของ Select */
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+}
+
+.custom-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #aaa; /* สีเทาอ่อนตอนยังไม่เลือก */
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* ส่วนของหัวศรด้านขวา */
+.custom-select-trigger .arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #2b6edc;
+    border-bottom: 2px solid #2b6edc;
+    transform: rotate(45deg);
+    margin-bottom: 4px;
+    transition: transform 0.3s;
+}
+
+/* เมื่อเปิด Dropdown ให้หมุนหัวศรขึ้น */
+.custom-select-wrapper.open .custom-select-trigger .arrow {
+    transform: rotate(-135deg);
+    margin-bottom: -4px;
+}
+
+/* กล่องรายการตัวเลือก */
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+/* เมื่อเปิด Dropdown ให้แสดงกล่อง */
+.custom-select-wrapper.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+/* รายการแต่ละแถว */
+.custom-option {
+    display: block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.custom-option:hover {
+    background-color: #f5f8ff;
+    color: #2b6edc;
+}
+
+/* ปรับแต่งขอบช่อง Input ตัวบนสุดเมื่อเปิดรายการ */
+.custom-select-wrapper.open .custom-select-trigger {
+    border-radius: 25px 25px 0 0;
+    border-bottom-color: transparent;
+}
+/* ปรับแต่งช่องวันที่ (Date Input) */
+.custom-date-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px; /* ความโค้งมนตามรูป */
+    font-family: 'Helvetica Neue', 'Noto Sans Thai', sans-serif;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* ปรับแต่งไอคอนปฏิทิน (สำหรับ Chrome/Safari) */
+.custom-date-input::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    cursor: pointer;
+    color: #2b6edc; /* เปลี่ยนสีไอคอนปฏิทินให้เป็นสีฟ้า */
+}
+
+/* จัดวางเวลาให้อยู่ในแถวเดียวกัน */
+.time-picker-container {
+    display: flex;
+    gap: 8px;
+}
+
+.time-select {
+    flex: 1;
+}
+
+.time-select .custom-select-trigger {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-radius: 25px; /* คงความโค้งมน */
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-blue">
+        <a href="javascript:history.back()" class="back-btn">
+        <span class="arrow">&lsaquo;</span>
+        </a>
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img src="img/WWP-icon.png" alt="Profile Picture" class="avatar">
+            </div>
+            <h2>นันทพงศ์ วงศ์ราษฎร์</h2>
+            <p>ฝึกงานตำแหน่ง web design</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="form-group">
+                <label>ชื่อผู้ใช้งาน</label>
+                <input type="text" value="นันทพงศ์ วงศ์ราษฎร์" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>อีเมล</label>
+                <input type="email" value="nanthapong.wwp@gmail.com" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>สถานะ</label>
+                <input type="text" value="นักศึกษาฝึกงาน" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>ตำแหน่ง</label>
+                <input type="text" value="web design" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>ธนาคาร</label>
+                <input type="text" value="กรุงโรม" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>เลขบัญชี</label>
+                <input type="text" value="XXX-X-XXX-X" readonly>
+            </div>
+
+            <!-- <div class="btn-box"><button class="edit-btn">แก้ไขข้อมูล</button></div> -->
+            
+        </div>
+    </div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>แก้ไขข้อมูลส่วนตัว</h3>
+            <hr>
+            <form id="editForm">
+                <div class="edit-avatar-section">
+                    <img src="img/WWP-icon.png" id="imgPreview" class="avatar-preview">
+                    <label for="fileInput" class="upload-label">เปลี่ยนรูปโปรไฟล์</label>
+                    <input type="file" id="fileInput" accept="image/*" style="display:none">
+                </div>
+                <div class="form-group">
+                    <label>ชื่อผู้ใช้งาน</label>
+                    <input type="text" id="editName" value="นันทพงศ์ วงศ์ราษฎร์">
+                </div>
+                <div class="form-group">
+                    <label>อีเมล</label>
+                    <input type="text" id="editEmail" value="nanthapong.wwp@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label>ธนาคาร</label>
+                    <input type="text" id="editBank" value="กรุงโรม">
+                </div>
+                <div class="form-group">
+                    <label>เลขบัญชี</label>
+                    <input type="text" id="editID_bank" value="XXX-X-XXX-X">
+                </div>
+                <button type="submit" class="save-btn">บันทึกข้อมูล</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/profile.js"></script>
+</body>
+</html>

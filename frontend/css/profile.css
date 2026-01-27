@@ -1,0 +1,217 @@
+body {
+    background-color: #f5f7fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ส่วนพื้นหลังสีฟ้าด้านบน */
+.background-blue {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 15px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-header h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.profile-header p {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* ส่วน Card ข้อมูล */
+.container {
+    width: 90%;
+    max-width: 450px;
+    margin-top: -80px; /* ดัน card ขึ้นไปทับส่วนสีฟ้า */
+    padding: 20px;
+}
+
+.profile-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.form-group input {
+    width: 86%;
+    padding: 12px 20px;
+    background-color: #f1f3f9;
+    border: 1px solid #e0e4ec;
+    border-radius: 12px;
+    color: #444;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* ปุ่มแก้ไขข้อมูล */
+.edit-btn {
+    width: 40%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #F1AD00, #e6a73c);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(241, 187, 90, 0.4);
+    transition: transform 0.2s;
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #e6a73c, #d9962b);
+}
+.btn-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.2s;
+    font-weight: 100;
+    margin-top: 15px;
+}
+
+.back-btn:hover {
+    opacity: 0.7;
+}
+
+.back-btn .arrow {
+    font-size: 5rem;
+    line-height: 0;
+    margin-bottom: 4px;
+}
+/* สไตล์พื้นหลัง Modal (Overlay) */
+.modal {
+    display: none; /* ซ่อนไว้เริ่มต้น */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังดำโปร่งแสง */
+    backdrop-filter: blur(4px); /* ทำพื้นหลังเบลอ */
+    justify-content: center;
+    align-items: center;
+}
+
+/* กล่องเนื้อหา Modal */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ปุ่มปิด (X) */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover { color: #333; }
+
+.modal-content h3 { margin-bottom: 15px; color: #2b6edc; }
+.modal-content hr { border: 0.5px solid #eee; margin-bottom: 20px; }
+
+/* ปุ่มบันทึก */
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2b6edc;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-btn:hover { background-color: #1e52ab; }
+.edit-avatar-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    border: 2px solid #2b6edc;
+}
+
+.upload-label {
+    font-size: 0.8rem;
+    color: #2b6edc;
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,266 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    /* margin-top: 10%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-history{
+    margin: 10px;
+    width: 90%;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px #D9D9D9 solid;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.container{
+    margin: 10px;
+    width: 90%;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px #D9D9D9 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-2 a{
+    color: #fff;
+    margin:0 10px;
+}
+.card-status a{
+    color: black;
+}
+.txt p{
+    margin: 0 10px;
+}
+.txt{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.url{
+    color: #7A7676;
+}
+.content-2{
+    /* margin-top: 5%; */
+}
+.card-status{
+    width: 90%;
+    height: fit-content;
+    border: 1px #D9D9D9 solid;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin: 0 10px 20px;
+}
+.status{
+    border: 1px #ddd solid;
+    padding: 2px 10px;
+    border-radius: 15px;
+    min-width: 60px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+.card-id p{
+    font-size: 25px;
+}
+.card-state p{
+    font-size: 14px;
+}
+.card-id{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+}
+.card-state{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    /* margin-top: 5%; */
+    gap: 15px;
+}
+/* #state_1{
+    color: #FFDC72;
+}
+#state_2{
+    color: #89FC85;
+}
+#state_3{
+    color: #FF7777;
+}
+#state_4{
+    color: #00A70B;
+} */
+.card-state h2{
+    font-size: 20px;
+    font-weight: 310;
+}
+.respon{
+    width: 50%;
+}
+@media (max-width: 768px) {
+    .respon{
+        width: 100%;
+    }
+}
+/* จัดวางตัวเลขและลูกศรให้ขนานกัน */
+.detail-dropdown-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 90%;
+
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+/* สร้างลูกศรสีฟ้า */
+.arrow-blue {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #2b6edc;
+    border-bottom: 2px solid #2b6edc;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+    margin-bottom: 4px;
+}
+
+/* เมื่อเปิด Popup ให้หมุนลูกศร */
+.detail-dropdown-wrapper.active .arrow-blue {
+    transform: rotate(-135deg);
+    margin-bottom: -4px;
+}
+
+/* สไตล์ของ Popup */
+.dropdown-popup {
+    display: none; /* ซ่อนไว้ก่อน */
+    top: 100%;
+    background: white;
+    min-width: 310px;
+    padding: 15px;
+    border-radius: 15px;
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.15); */
+    z-index: 50;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* แสดง Popup เมื่อมีคลาส active */
+.detail-dropdown-wrapper.active .dropdown-popup {
+    display: block;
+    animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ตกแต่งข้อมูลด้านใน */
+.popup-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.popup-item strong {
+    color: #2b6edc;
+}
+
+.dropdown-popup hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+/* อนุมัติ */
+#status_1{
+    background-color: #D8F2FF;
+}
+/* รออุมัติ */
+#status_2{
+    background-color: #FFF3D0;
+}
+/* สำเร็จ */
+#status_3{
+    background-color: #BCFFD2;
+}
+/* ไม่อนุมัติ */
+#status_4{
+    background-color: #FFD1D1;
+}
+
+.box_state{
+    width: 70px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#box_state_1{
+    background-color: #FFF3D0;
+}
+#box_state_2{
+    background-color: #D8F2FF;
+}
+#box_state_3{
+    background-color: #FFD1D1;
+}
+#box_state_4{
+    background-color: #BCFFD2;
+}
+/* .form-header{
+    text-align: center;
+    margin-top: 10%;
+} */
+.form-header h1{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 300;
+}
+.chevron-left {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #2b6edc;
+    border-bottom: 2px solid #2b6edc;
+    transform: rotate(45deg);
+}
+.back-link {
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+}
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    /* margin-bottom: 10px; */
+    margin-top: 10%;
+    position: relative;
+}
+.user_name {
+    display: flex;
+    justify-content: flex-start;
+    width: 94%;
+}
+.user_name p {
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
