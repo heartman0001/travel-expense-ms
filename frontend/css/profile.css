@@ -215,3 +215,17 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
+.chevron-left {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.back-link {
+    text-decoration: none;
+    position: absolute;
+    left: 25px;
+    top: 40px;
+}

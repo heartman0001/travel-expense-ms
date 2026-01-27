@@ -7,7 +7,6 @@
     align-items: center;
     color: white;
     text-align: center;
-    padding-bottom: 50px;
 }
 body::before{
     display: none;
@@ -68,27 +67,29 @@ body::before{
     background-color: #0064E0;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 5%;
     display:flex ;
     justify-content: space-between;
-    padding: 12px 20px;
-    font-size: 20px;
+    padding: 6px 10px;
     text-decoration: none;
 }
 button{
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
+    margin-left: 10px;
 }
 .btn span{
     font-size: 50px;
     font-weight: 200;
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
 }
 .content{
     display: flex;
@@ -99,4 +100,18 @@ button{
     .btn-container{
         width: 100%;
     }
+}
+.chevron-left {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #2b6edc;
+    border-bottom: 2px solid #2b6edc;
+    transform: rotate(45deg);
+}
+.back-link {
+    text-decoration: none;
+    position: absolute;
+    left: 25px;
+    top: 40px;
 }
