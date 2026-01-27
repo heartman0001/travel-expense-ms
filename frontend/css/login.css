@@ -37,7 +37,7 @@ body::before {
     background-color: transparent;
     padding: 40px;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
 }
 .title-head h1 {
     margin-bottom: 5px;
@@ -64,7 +64,7 @@ body::before {
 }
 .title-head{
     margin-top: 20%;
-    margin-bottom: 40%;
+    margin-bottom: 35%;
 }
 .login-form p {
     font-size: 14px;
@@ -75,14 +75,14 @@ body::before {
 
 .input-group {
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: 300;
-    color: #555;
+    color: #000;
 }
 
 .input-group input {
@@ -93,6 +93,8 @@ body::before {
     outline: none;
     transition: border-color 0.3s;
     background-color: #fff;
+    height: 50px;
+    font-size: 14px;
 }
 
 .input-group input:focus {
@@ -145,6 +147,7 @@ body::before {
 .logo-img {
     width: 80%;
     height: auto;
+    margin-top: 5px;
 }
 .container-logo{
     width: 100%;
@@ -181,11 +184,29 @@ input.invalid + .error-message {
 }
 .forgot-password{
     color: #0064E0;
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-top: 5px;
     margin-left: 15px;
     text-align:right !important;
     display: flex;
     justify-content: end;
     text-decoration: none;
+}
+
+@media (max-width: 391px) {
+    .title-head{
+        margin-bottom: 45%;
+    }
+}
+@media (max-width: 376px) {
+    body::before {
+        height: 250px !important;
+    }
+    .title-head{
+        margin-bottom: 10%;
+        margin-top: 15%;
+    }
+    .btn-container{
+        margin-top: 0px;
+    }
 }

@@ -211,6 +211,11 @@ body{
     padding: 10px;
     border-radius: 10px;
 }
+@media (max-width: 376px) {
+    .box_state{
+        padding: 5px;
+}
+}
 #box_state_1{
     background-color: #FFF3D0;
 }
