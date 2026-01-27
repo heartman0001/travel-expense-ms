@@ -150,13 +150,14 @@ body{
     display: none; /* ซ่อนไว้ก่อน */
     top: 100%;
     background: white;
-    min-width: 310px;
+    /* min-width: 310px; */
     padding: 15px;
     border-radius: 15px;
     /* box-shadow: 0 5px 20px rgba(0,0,0,0.15); */
     z-index: 50;
     margin-top: 10px;
     text-align: left;
+    width: 97%;
 }
 
 /* แสดง Popup เมื่อมีคลาส active */
