@@ -85,6 +85,7 @@ select {
     color: #555;
     outline: none;
     appearance: none; /* ซ่อนลูกศรเดิม */
+    height: 45px;
 }
 
 /* ใส่ลูกศรจำลองสำหรับ Select */
@@ -171,6 +172,7 @@ select {
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s;
+    height: 45px;
 }
 
 /* ส่วนของหัวศรด้านขวา */
