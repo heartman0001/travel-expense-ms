@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'DB Helvethaica X', 'Helvetica Neue', Helvetica, Arial, sans-serif ,'Noto Sans Thai', sans-serif;    margin: 0;
+
+}
+@font-face {
+    font-family: 'DB Helvethaica X';
+    src: url('fonts/db-helvethaica-x.woff2') format('woff2'),
+         url('fonts/db-helvethaica-x.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DB Helvethaica X';
+    src: url('fonts/db-helvethaica-x-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -237,17 +255,15 @@ select {
     color: #2b6edc;
 }
 
-/* ปรับแต่งขอบช่อง Input ตัวบนสุดเมื่อเปิดรายการ */
 .custom-select-wrapper.open .custom-select-trigger {
     border-radius: 25px 25px 0 0;
     border-bottom-color: transparent;
 }
-/* ปรับแต่งช่องวันที่ (Date Input) */
 .custom-date-input {
     width: 100%;
     padding: 10px 15px;
     border: 1px solid #e0e0e0;
-    border-radius: 25px; /* ความโค้งมนตามรูป */
+    border-radius: 25px;
     font-family: 'Helvetica Neue', 'Noto Sans Thai', sans-serif;
     color: #333;
     outline: none;
@@ -255,14 +271,12 @@ select {
     background-color: #fff;
 }
 
-/* ปรับแต่งไอคอนปฏิทิน (สำหรับ Chrome/Safari) */
 .custom-date-input::-webkit-calendar-picker-indicator {
     opacity: 0.6;
     cursor: pointer;
-    color: #2b6edc; /* เปลี่ยนสีไอคอนปฏิทินให้เป็นสีฟ้า */
+    color: #2b6edc;
 }
 
-/* จัดวางเวลาให้อยู่ในแถวเดียวกัน */
 .time-picker-container {
     display: flex;
     gap: 8px;
@@ -275,5 +289,5 @@ select {
 .time-select .custom-select-trigger {
     padding: 12px 15px;
     font-size: 0.9rem;
-    border-radius: 25px; /* คงความโค้งมน */
+    border-radius: 25px;
 }
