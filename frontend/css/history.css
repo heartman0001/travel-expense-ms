@@ -259,6 +259,11 @@ body{
     margin-top: 10%;
     position: relative;
 }
+@media (max-width: 376px) {
+    .form-header{
+        margin-top: 0px;
+    }
+}
 .user_name {
     display: flex;
     justify-content: flex-start;

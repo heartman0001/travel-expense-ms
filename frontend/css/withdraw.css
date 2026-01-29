@@ -111,7 +111,7 @@ button{
 .body-container{
     width: 100%;
     max-width: 450px;
-    min-height: 100vh;
-    border: 1px solid #eee;
+    min-height: auto;
+    /* border: 1px solid #eee; */
     padding: 0 25px 40px;
 }
