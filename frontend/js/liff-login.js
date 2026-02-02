@@ -26,6 +26,7 @@ async function initLiff() {
             // 4. นำข้อมูลไปใส่ใน HTML (ใช้ ID ที่คุณตั้งไว้)
             if (profileData.pictureUrl) {
                 document.getElementById('img').src = profileData.pictureUrl;
+                document.getElementById('name').innerText = profileData.displayName;
                 // ถ้ามีรูปใน Modal แก้ไขด้วย
                 const imgPreview = document.getElementById('imgPreview');
                 if(imgPreview) imgPreview.src = profileData.pictureUrl;
@@ -37,7 +38,6 @@ async function initLiff() {
             const nameInput = document.querySelector('input[value="นันทพงศ์ วงศ์ราษฎร์"]');
             if(nameInput) nameInput.value = profileData.displayName;
 
-            document.getElementById('name').innerText = profileData.displayName;
         }
     } catch (error) {
         console.error("LIFF Initialization failed", error);
