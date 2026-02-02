@@ -33,14 +33,11 @@ async function initLiff() {
             // ใส่ชื่อในหัวข้อ H2
             const nameHeader = document.querySelector('.profile-header h2');
             if(nameHeader) nameHeader.innerText = profileData.displayName;
-
-            document.getElementById('name').innerText = profileData.displayName;
-            const nameUser = document.querySelector('.user_name p');
-            if(nameUser) nameUser.innerText = profileData.displayName;
-
             // ใส่ชื่อในช่อง Input (ถ้าต้องการให้ดึงจาก LINE มาแสดงเลย)
             const nameInput = document.querySelector('input[value="นันทพงศ์ วงศ์ราษฎร์"]');
             if(nameInput) nameInput.value = profileData.displayName;
+
+            document.getElementById('name').innerText = profileData.displayName;
         }
     } catch (error) {
         console.error("LIFF Initialization failed", error);
