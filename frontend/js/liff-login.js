@@ -26,7 +26,6 @@ async function initLiff() {
             // 4. นำข้อมูลไปใส่ใน HTML (ใช้ ID ที่คุณตั้งไว้)
             if (profileData.pictureUrl) {
                 document.getElementById('img').src = profileData.pictureUrl;
-                
                 // ถ้ามีรูปใน Modal แก้ไขด้วย
                 const imgPreview = document.getElementById('imgPreview');
                 if(imgPreview) imgPreview.src = profileData.pictureUrl;
