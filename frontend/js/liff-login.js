@@ -9,6 +9,7 @@ window.onload = function(){
     })
 }
 async function initLiff() {
+    let profileData = null;
     profileData = await liff.getProfile();
     console.log(profileData);
 
