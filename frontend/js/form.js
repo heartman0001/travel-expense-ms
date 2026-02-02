@@ -1,26 +1,40 @@
-const fileInput = document.getElementById('file-input');
-const fileList = document.getElementById('file-list');
+const fileInput = document.getElementById('fileInput');
+const fileList = document.getElementById('fileList');
 
 fileInput.addEventListener('change', function() {
-    fileList.innerHTML = ''; // ล้างรายการเก่าออก (กรณีเลือกใหม่)
-    
-    if (this.files && this.files.length > 0) {
-        const file = this.files[0]; // ดึงไฟล์แรกที่เลือก
-        
-        // สร้าง UI สำหรับแสดงชื่อไฟล์
+    // ใช้ DataTransfer เพื่อช่วยในการจัดการไฟล์ภายใน input
+    let dt = new DataTransfer();
+    const { files } = this;
+
+    // ล้าง UI เก่าก่อนแสดงใหม่ (หรือจะใช้แบบ append ต่อท้ายก็ได้)
+    fileList.innerHTML = ''; 
+
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        dt.items.add(file); // เก็บไฟล์ไว้ใน DataTransfer
+
         const fileItem = document.createElement('div');
         fileItem.className = 'file-item';
+        fileItem.style.display = 'flex';
+        fileItem.style.justifyContent = 'space-between';
+        fileItem.style.marginBottom = '5px';
+
         fileItem.innerHTML = `
-            <span>${file.name}</span>
-            <span class="remove-file">&times;</span>
+            <span>📄 ${file.name}</span>
+            <span class="remove-file" style="cursor:pointer; color:red; font-weight:bold;">&times;</span>
         `;
         
         fileList.appendChild(fileItem);
 
-        // จัดการเมื่อกดลบไฟล์
+        // จัดการเมื่อกดลบ "เฉพาะไฟล์นี้"
         fileItem.querySelector('.remove-file').addEventListener('click', function() {
-            fileInput.value = ''; // ล้างค่าใน input
-            fileList.innerHTML = ''; // ลบ UI preview ออก
+            // สร้าง DataTransfer ใหม่เพื่อคัดกรองไฟล์ที่เหลือ
+            let newDt = new DataTransfer();
+            for (let j = 0; j < fileInput.files.length; j++) {
+                if (i !== j) newDt.items.add(fileInput.files[j]);
+            }
+            fileInput.files = newDt.files; // อัปเดตไฟล์ที่เหลือกลับเข้า input
+            fileItem.remove(); // ลบ UI ของไฟล์นั้นออก
         });
     }
 });
@@ -37,7 +51,7 @@ submitBtn.addEventListener('click', function(e) {
 
 // เมื่อกดปุ่ม "เสร็จสิ้น"
 closePopup.addEventListener('click', function() {
-    window.location.href = "mainpage.html";
+    window.location.href = "index.html";
     //successPopup.style.display = 'none'; // ซ่อน Popup
     // คุณสามารถเพิ่ม liff.closeWindow(); ตรงนี้เพื่อให้มันปิดหน้าเว็บใน LINE ทันที
 });
