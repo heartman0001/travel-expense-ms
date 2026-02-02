@@ -68,6 +68,4 @@ async function initLiff() {
         console.error("LIFF Initialization failed", error);
     }
 }
-
-// *** สำคัญมาก: ต้องเรียกใช้งานฟังก์ชันด้วย ***
 initLiff();
