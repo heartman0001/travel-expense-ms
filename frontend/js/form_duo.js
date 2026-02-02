@@ -57,7 +57,7 @@ submitBtn.addEventListener('click', function(e) {
 
 // เมื่อกดปุ่ม "เสร็จสิ้น"
 closePopup.addEventListener('click', function() {
-    window.location.href = "mainpage.html";
+    window.location.href = "index.html";
     //successPopup.style.display = 'none'; // ซ่อน Popup
     // คุณสามารถเพิ่ม liff.closeWindow(); ตรงนี้เพื่อให้มันปิดหน้าเว็บใน LINE ทันที
 });
