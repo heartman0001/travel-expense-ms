@@ -4,10 +4,6 @@ window.onload = function(){
             if (liff.isLoggedIn()){
                 liff.getProfile().then(profile => {
                     const nameElement = document.getElementById('userName');
-                    const nameInput = document.querySelector('input[value="userName"]');
-                    if(nameInput) {
-                        nameInput.value = profileData.displayName;
-                    }
                     if (nameElement) {
                         nameElement.innerText = profile.displayName;
                     }
@@ -15,6 +11,10 @@ window.onload = function(){
                     const imgElement = document.getElementById('img');
                     if (imgElement && profile.pictureUrl) {
                         imgElement.src = profile.pictureUrl;
+                    }
+                    const nameInput = document.querySelector('input[value="userName"]');
+                    if(nameInput) {
+                        nameInput.value = profileData.displayName;
                     }
                 }).catch((err) => {
                     console.error('Error getting profile:', err);
