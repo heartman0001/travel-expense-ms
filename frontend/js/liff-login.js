@@ -33,6 +33,7 @@ async function initLiff() {
 
             // ใส่ชื่อในหัวข้อ H2
             const nameHeader = document.querySelector('.profile-header h2');
+            const name = document.querySelector('#name');
             if(nameHeader) nameHeader.innerText = profileData.displayName;
 
             // ใส่ชื่อในช่อง Input (ถ้าต้องการให้ดึงจาก LINE มาแสดงเลย)
