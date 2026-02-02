@@ -26,11 +26,11 @@ async function initLiff() {
             // 4. นำข้อมูลไปใส่ใน HTML (ใช้ ID ที่คุณตั้งไว้)
             if (profileData.pictureUrl) {
                 document.getElementById('img').src = profileData.pictureUrl;
+                document.getElementById('name').src = profileData.pictureUrl;
                 // ถ้ามีรูปใน Modal แก้ไขด้วย
                 const imgPreview = document.getElementById('imgPreview');
                 if(imgPreview) imgPreview.src = profileData.pictureUrl;
             }
-
             // ใส่ชื่อในหัวข้อ H2
             const nameHeader = document.querySelector('.profile-header h2');
             if(nameHeader) nameHeader.innerText = profileData.displayName;
@@ -38,9 +38,6 @@ async function initLiff() {
             // ใส่ชื่อในช่อง Input (ถ้าต้องการให้ดึงจาก LINE มาแสดงเลย)
             const nameInput = document.querySelector('input[value="นันทพงศ์ วงศ์ราษฎร์"]');
             if(nameInput) nameInput.value = profileData.displayName;
-
-            const nameUser = document.querySelector('#name');
-            if(nameUser) nameUser.value = profileData.displayName;
         }
     } catch (error) {
         console.error("LIFF Initialization failed", error);
