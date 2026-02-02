@@ -32,6 +32,7 @@ async function initLiff() {
             }
             if (profileData.displayName) {
                 document.getElementById('name').innerText = profileData.displayName;
+                document.getElementById('userNameInput').innerText = profileData.displayName;
             }
             // ใส่ชื่อในหัวข้อ H2
             const nameHeader = document.querySelector('.profile-header h2');
