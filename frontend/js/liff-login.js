@@ -14,7 +14,7 @@ window.onload = function(){
                     }
                     const nameInput = document.querySelector('input[value="userName"]');
                     if(nameInput) {
-                        nameInput.value = profileData.displayName;
+                        nameInput.value = profile.displayName;
                     }
                 }).catch((err) => {
                     console.error('Error getting profile:', err);
