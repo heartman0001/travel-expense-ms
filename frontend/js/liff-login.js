@@ -34,6 +34,7 @@ async function initLiff() {
             const nameHeader = document.querySelector('.profile-header h2');
             if(nameHeader) nameHeader.innerText = profileData.displayName;
 
+            document.getElementById('name').innerText = profileData.displayName;
             const nameUser = document.querySelector('.user_name p');
             if(nameUser) nameUser.innerText = profileData.displayName;
 
