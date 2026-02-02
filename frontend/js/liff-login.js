@@ -4,11 +4,13 @@ window.onload = function(){
             if (liff.isLoggedIn()){
                 liff.getProfile().then(profile => {
                     const nameElement = document.getElementById('userName');
+                    const nameInput = document.querySelector('input[value="userName"]');
+                    if(nameInput) {
+                        nameInput.value = profileData.displayName;
+                    }
                     if (nameElement) {
                         nameElement.innerText = profile.displayName;
                     }
-                    const nameInput = document.querySelector('input[value="userName"]');
-                    if(nameInput) nameInput.value = profileData.displayName;
                     
                     const imgElement = document.getElementById('img');
                     if (imgElement && profile.pictureUrl) {
