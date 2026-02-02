@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', function(e) {
     // จำลองการตรวจสอบ (เปลี่ยนเป็น logic จริงภายหลัง)
     if (emailInput.value.includes("gmail.com")) {
         // alert("เข้าสู่ระบบสำเร็จ");
-        window.location.href = "mainpage.html";
+        window.location.href = "main.html";
     } else {
         emailInput.classList.add('invalid');
     }
