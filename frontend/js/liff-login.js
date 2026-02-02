@@ -8,3 +8,11 @@ window.onload = function(){
         })
     })
 }
+async function initLiff() {
+    profileData = await liff.getProfile();
+    console.log(profileData);
+
+
+    document.getElementById('name').innerText = profileData.displayName;
+    document.getElementById('img').src = profileData.pictureUrl;
+}

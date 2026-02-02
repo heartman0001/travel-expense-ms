@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/history.css">
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <title>History</title>
+</head>
+<body>
+    <div class="respon">
+        <section>
+            <header class="form-header">
+            <!-- <a href="javascript:history.back()" class="back-link">
+                <span class="chevron-left"></span>
+            </a> -->
+            <h1>รายการเบิกเเงินค่าเดินทาง</h1>
+            </header>
+        </section>
+        <section>
+            <div class="search-section">
+                <div class="search-box">
+                    <i class="search-icon">🔍</i>
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterData()">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content-2">
+                <a>รายการเบิกเเงินค่าเดินทาง</a>
+                <div class="container">
+                    <div style="margin-top: 10px;" class="card-status">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_1">อนุมัติ</a></div>
+                        <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>100.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>weweb plus</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>ศาลปกครอง</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>จรวจ</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ต้าแอด</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="card-status">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_2">รออนุมัติ</a></div>
+                        <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>100.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>weweb plus</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>ศาลปกครอง</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>จรวจ</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ต้าแอด</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="card-status">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_3">โอนจ่ายสำเร็จ</a></div>
+                        <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>100000.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>weweb plus</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>ศาลปกครอง</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>จรวจ</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ต้าแอด</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="card-status">
+                        <div class="txt"><a>อัสคาบัน</a> <a class="status" id="status_4">ไม่อนุมัติ</a></div>
+                        <div class="txt"><p class="url">32 ม.ค. 2670 - 25.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>999292921923.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>บ้านแฮร์กริด</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>อัสคาบัน</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>ไม่กวาด</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ดับเบิลดอร์</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="../js/finance-navigation.js"></script>
+        <script src="../js/select2.js"></script>
+        <script>function filterData() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            // ตัวอย่าง: ถ้าคุณมีรายการหน่วยงานให้เลือก คุณสามารถใช้ค่าจาก input ไปสั่งซ่อน/แสดงผลได้
+            console.log("กำลังค้นหา: " + input);
+            }
+        </script>
+    </div>
+</body>
+</html>
