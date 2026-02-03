@@ -277,7 +277,7 @@ body{
 }
 /* ส่วนการค้นหา */
 .search-section {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     justify-content: center;
     display: flex;
 }

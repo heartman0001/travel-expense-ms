@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img class="nav-icon" src="../img/icon/list.png" width="24px" height="24px">
                 <span>อนุมัติ</span>
             </a>
-            <a href="withdraw.html" class="nav-item" data-page="withdraw">
+            <a href="info.html" class="nav-item" data-page2="burge2" data-page="burge1">
                 <img class="nav-icon" src="../img/icon/withdraw.png" width="24px" height="24px">
                 <span>เบิกเงิน</span>
             </a>
@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navItems.forEach(item => {
         if (item.getAttribute('data-page') === currentPage) {
+            item.classList.add('active');
+        }
+        if (item.getAttribute('data-page2') === currentPage) {
             item.classList.add('active');
         }
     });

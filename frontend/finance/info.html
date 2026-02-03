@@ -1,173 +1,31 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เบิกเงินค่าเดินทางขากลับ</title>
-    <link rel="stylesheet" href="css/form.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/withdraw.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <title>withdraw</title>
 </head>
 <body>
-    <div class="form-container">
-        <header class="form-header">
+    <div class="body-container">
+        <div class="background-blue">
             <a href="javascript:history.back()" class="back-link">
                 <span class="chevron-left"></span>
             </a>
-            <h1>เบิกเงินค่าเดินทางขากลับ</h1>
-        </header>
-
-        <form class="expense-form">
-            <div class="form-group">
-                <label>ชื่อโครงการ<span class="required">*</span></label>
-                <div class="custom-select-wrapper">
-                    <div class="custom-select-trigger">
-                        <span>เลือกชื่อโครงการ</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option" data-value="">ศาลปกครอง</span>
-                        <span class="custom-option" data-value="">DMCR</span>
-                    </div>
-                </div>
-                
-                <input type="hidden" name="travel_project">
+            <div class="header">
+                <img src="../img/WWP-icon.png" alt="Profile Picture" class="avatar">
+                <h1>เบิกเงินค่าเดินทาง</h1>
             </div>
-
-            <div class="form-group">
-                <label>สถานที่ต้นทาง<span class="required">*</span></label>
-                <input type="text" placeholder="กรุณากรอกสถานที่ต้นทาง">
+        </div>
+        <div class="content">
+            <div class="btn-container">
+                <a href="burge1.html" class="btn"><button type="submit" class="">การอนุมัติ</button><span class="">&rsaquo;</span></a>
+                <a href="burge2.html" class="btn"><button type="submit" class="">การโอนจ่าย</button><span class="">&rsaquo;</span></a>
             </div>
-
-            <div class="form-group">
-                <label>สถานที่ปลายทาง<span class="required">*</span></label>
-                <input type="text" placeholder="กรุณากรอกสถานที่ปลายทาง">
-            </div>
-
-            <div class="row">
-            <div class="form-group col">
-                <label>วันที่เดินทาง<span class="required">*</span></label>
-                <div class="input-with-icon">
-                    <input type="date" class="custom-date-input" placeholder="กรุณาเลือกวันที่">
-                </div>
-            </div>
-
-            <div class="form-group col">
-                    <label>เวลาที่เดินทาง<span class="required">*</span></label>
-                    <div class="time-picker-container">
-                        <div class="custom-select-wrapper time-select">
-                            <div class="custom-select-trigger">
-                                <span>ชม.</span>
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="custom-options">
-                                <span class="custom-option">01</span>
-                                <span class="custom-option">02</span>
-                                <span class="custom-option">03</span>
-                                <span class="custom-option">04</span>
-                                <span class="custom-option">05</span>
-                                <span class="custom-option">06</span>
-                                </div>
-                        </div>
-                        <div class="custom-select-wrapper time-select">
-                            <div class="custom-select-trigger">
-                                <span>นาที</span>
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="custom-options">
-                                <span class="custom-option">00</span>
-                                <span class="custom-option">15</span>
-                                <span class="custom-option">30</span>
-                                <span class="custom-option">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>การเดินทาง<span class="required">*</span></label>
-                
-                <div class="custom-select-wrapper">
-                    <div class="custom-select-trigger">
-                        <span>เลือกวิธีการเดินทาง</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option" data-value="bts">รถไฟฟ้า</span>
-                        <span class="custom-option" data-value="bus">รถเมล์</span>
-                        <span class="custom-option" data-value="car">รถยนต์ส่วนตัว (เบิกค่าน้ำมัน)</span>
-                        <span class="custom-option" data-value="bike">วิน</span>
-                        <span class="custom-option" data-value="grab">Grab</span>
-                        <span class="custom-option" data-value="lineman">LINE MAN</span>
-                        <span class="custom-option" data-value="bolt">Bolt</span>
-                        <span class="custom-option" data-value="plane">เครื่องบิน</span>
-                    </div>
-                </div>
-                
-                <input type="hidden" name="travel_method">
-            </div>
-
-            <div class="form-group">
-                <label>ค่าเดินทางทั้งหมด<span class="required">*</span></label>
-                <input type="number" placeholder="กรุณากรอกค่าเดินทางทั้งหมด">
-            </div>
-
-            <div class="form-group">
-                <label>ผู้อนุมัติการเบิก<span class="required">*</span></label>
-                <div class="custom-select-wrapper">
-                    <div class="custom-select-trigger">
-                        <span>กรุณาใส่ ผู้อนุมัติการเบิก</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option" data-value="bts">บาส design</span>
-                        <span class="custom-option" data-value="bus">เขต SA</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>การจ่ายเงิน<span class="required">*</span></label>
-                <div class="custom-select-wrapper">
-                    <div class="custom-select-trigger">
-                        <span>กรุณาเลือกวิธีชำระเงิน</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option" data-value="bts">เงินสด</span>
-                        <span class="custom-option" data-value="bus">โอนจ่าย</span>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="divider">
-
-            <div class="form-group">
-                <label>แนบหลักฐานการจ่ายเงิน<span class="required">*</span></label>
-                <div class="file-upload">
-                    <label for="file-input" class="file-label">เลือกไฟล์</label>
-                    <input type="file" id="file-input" hidden> </div>
-                <div id="file-list" class="file-preview-container"></div>
-            </div>
-
-            <div class="footer-btn">
-                <button type="submit" class="submit-btn">ยืนยัน</button>
-            </div>
-        </form>
-    </div>
-    <div id="successPopup" class="popup-overlay">
-        <div class="popup-content">
-            <div class="success-icon">
-                <div class="check-mark"></div>
-            </div>
-            
-            <p class="success-text">ส่งข้อมูลสำหรับเบิกเงินค่า<br>เดินทางสำเร็จ</p>
-            
-            <button type="button" id="closePopup" class="done-btn">เสร็จสิ้น</button>
         </div>
     </div>
-<script src="js/select2.js"></script>
-<script src="js/form.js"></script>
 </body>
 </html>

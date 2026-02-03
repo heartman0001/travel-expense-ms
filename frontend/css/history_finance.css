@@ -1,0 +1,11 @@
+.card-state{
+    justify-content: center !important;
+}
+.summary label{
+    color: #5E5E5E;
+    font-size: 24px;
+}
+.card-id p{
+    font-weight: bold;
+    font-size: 36px;
+}
