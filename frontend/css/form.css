@@ -269,6 +269,18 @@ select {
     outline: none;
     cursor: pointer;
     background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.custom-date-input:before{
+    content: attr(placeholder);
+    width: 100%;
+    color: #999;
+}
+.custom-date-input:focus:before,
+.custom-date-input:valid:before {
+    display: none;
 }
 
 .custom-date-input::-webkit-calendar-picker-indicator {

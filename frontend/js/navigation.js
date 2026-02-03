@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.head.appendChild(link);
     const navHTML = `
         <nav class="bottom-nav">
-            <a href="index.html" class="nav-item" data-page="mainpage">
+            <a href="index.html" class="nav-item" data-page="index">
                 <img class="nav-icon" src="img/icon/list.png" width="24px" height="24px">
                 <span>ประวัติ</span>
             </a>
