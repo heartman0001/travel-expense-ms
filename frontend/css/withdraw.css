@@ -13,7 +13,9 @@ body{
     text-align: center;
 }
 body::before{
-    display: none;
+    background-image: url('../img/bg-bottom.png'); /* เปลี่ยน path ให้ตรงกับที่เก็บรูป */
+    margin-top: 20%;
+    position: fixed;
 }
 .back-btn {
     position: absolute;
@@ -114,4 +116,14 @@ button{
     min-height: auto;
     /* border: 1px solid #eee; */
     padding: 0 25px 40px;
+}
+@media (max-height:667px) {
+    .background-blue{
+        height: 250px;
+    }
+}
+@media (max-height:844px) {
+    .background-blue{
+        height: 260px;
+    }
 }

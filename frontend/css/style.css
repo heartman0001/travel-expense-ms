@@ -16,7 +16,7 @@
     font-weight: bold;
     font-style: normal;
 }
-body::before {
+/* body::before {
     content: "";
     position: absolute;
     top: 0;
@@ -25,5 +25,18 @@ body::before {
     height: 380px;
     background:#0064E0;
     clip-path: ellipse(135% 100% at 20% 0%);
+    z-index: -1;
+} */
+ body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/bg-header.png'); /* เปลี่ยน path ให้ตรงกับที่เก็บรูป */
+    background-size:cover;
+    /* background-position: bottom center; */
+    background-repeat: no-repeat;
     z-index: -1;
 }

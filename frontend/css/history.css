@@ -190,19 +190,19 @@ body{
     margin: 10px 0;
 }
 /* อนุมัติ */
-#status_1{
+#status_2{
     background-color: #D8F2FF;
 }
 /* รออุมัติ */
-#status_2{
+#status_1{
     background-color: #FFF3D0;
 }
 /* สำเร็จ */
-#status_3{
+#status_4{
     background-color: #BCFFD2;
 }
 /* ไม่อนุมัติ */
-#status_4{
+#status_3{
     background-color: #FFD1D1;
 }
 
@@ -320,4 +320,100 @@ body{
 
 #searchInput::placeholder {
     color: #aaa;
+}
+.D-flex{
+    display: flex;
+    justify-content: space-between;
+}
+/* .modern-filter-select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #d0e3ff;
+    background-color: white;
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: #333;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-right: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+.modern-filter-select:focus {
+    outline: none;
+    border-color: #2b68e0;
+    box-shadow: 0 0 0 3px rgba(43, 104, 224, 0.1);
+}
+.modern-filter-select option {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+}
+.filter-select-wrapper{
+    margin-right: 10%;
+} */
+/* กรอบภายนอก */
+.filter-select-wrapper {
+    position: relative;
+    margin-right: 10%;
+}
+
+/* ปุ่มกด (ก๊อปสไตล์มาจาก .modern-filter-select เดิมของคุณ) */
+.modern-filter-select-clone {
+    width: 80px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #d0e3ff;
+    background-color: white;
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ตัว Popup ที่เด้งออกมาข้างใต้ */
+.dropdown-popup-list {
+    position: absolute;
+    top: calc(100% + 5px); /* ให้ลอยใต้ปุ่ม */
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* สีขาวตามที่ต้องการ */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* เงาให้ดูเหมือน Popup */
+    display: none; /* ซ่อนไว้ก่อน */
+    z-index: 999;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+/* แสดง Popup เมื่อมีการกด */
+.dropdown-popup-list.active {
+    display: block;
+    width: 105px;
+}
+
+/* รายการแต่ละแถวใน Popup */
+.option-item {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #f9f9f9;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.option-item:hover {
+    background-color: #f0f7ff; /* ไฮไลต์สีฟ้าอ่อนตอนจิ้ม */
+    color: #2b68e0;
+}
+.filter-section{
+    margin-right: 10px;
 }

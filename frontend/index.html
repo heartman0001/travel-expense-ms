@@ -30,19 +30,19 @@
                     <div class="card-state">
                         <div id="box_state_1" class="box_state">
                             <p id="state_1">รออนุมัติ</p>
-                            <h2>4</h2>
+                            <h2>0</h2>
                         </div>
                         <div id="box_state_2" class="box_state">
                             <p id="state_2">อนุมัติ</p>
-                            <h2>4</h2>
+                            <h2>0</h2>
                         </div>
                         <div id="box_state_3" class="box_state">
                             <p id="state_3">ไม่อนุมัติ</p>
-                            <h2>4</h2>
+                            <h2>0</h2>
                         </div>
                     <div id="box_state_4" class="box_state">
                             <p id="state_4">สำเร็จ</p>
-                            <h2>4</h2>
+                            <h2>0</h2>
                         </div>
                     </div>
                 </div>
@@ -50,10 +50,29 @@
         </section>
         <section>
             <div class="content-2">
-                <a>ประวัติการเบิก</a>
+                <div class="D-flex">
+                    <a style="padding: 8px 12px;">ประวัติการเบิก</a>
+                    <div class="filter-section">
+                        <div class="filter-select-wrapper">
+                            <div class="custom-dropdown" id="statusDropdown">
+                                <div class="modern-filter-select-clone">
+                                    <span id="selectedText">แสดงทั้งหมด</span>
+                                </div>
+                                
+                                <div class="dropdown-popup-list">
+                                    <div class="option-item" data-value="all">แสดงทั้งหมด</div>
+                                    <div class="option-item" data-value="pending">รออนุมัติ</div>
+                                    <div class="option-item" data-value="approved">อนุมัติแล้ว</div>
+                                    <div class="option-item" data-value="rejected">ไม่อนุมัติ</div>
+                                    <div class="option-item" data-value="success">สำเร็จ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container">
-                    <div style="margin-top: 10px;" class="card-status">
-                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_1">อนุมัติ</a></div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="approved">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_2">อนุมัติ</a></div>
                         <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
                         
                         <div class="txt detail-dropdown-wrapper">
@@ -86,8 +105,8 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 10px;" class="card-status">
-                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_2">รออนุมัติ</a></div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="pending">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_1">รออนุมัติ</a></div>
                         <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
                         
                         <div class="txt detail-dropdown-wrapper">
@@ -120,8 +139,110 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 10px;" class="card-status">
-                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_3">โอนจ่ายสำเร็จ</a></div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="approved">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_2">อนุมัติ</a></div>
+                        <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>100.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>weweb plus</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>ศาลปกครอง</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>จรวจ</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ต้าแอด</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="approved">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_2">อนุมัติ</a></div>
+                        <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>100.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>weweb plus</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>ศาลปกครอง</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>จรวจ</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ต้าแอด</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="approved">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_2">อนุมัติ</a></div>
+                        <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
+                        
+                        <div class="txt detail-dropdown-wrapper">
+                            <div class="dropdown-trigger">
+                                <p>100.00</p>
+                                <span class="arrow-blue"></span> </div>
+                            
+                            <div class="dropdown-popup">
+                                <div class="popup-item">
+                                    <span>สถานที่ต้นทาง:</span>
+                                    <strong>weweb plus</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>สถานที่ปลายทาง:</span>
+                                    <strong>ศาลปกครอง</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>การเดินทาง:</span>
+                                    <strong>จรวจ</strong>
+                                </div>
+                                <div class="popup-item">
+                                    <span>ผู้อนุมัติการเบิก:</span>
+                                    <strong>ต้าแอด</strong>
+                                </div>
+                                <hr>
+                                <div class="popup-item">
+                                    <span>การจ่ายเงิน:</span>
+                                    <p>ชำระผ่าน Mobile Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="success">
+                        <div class="txt"><a>ศาลปกครอง</a> <a class="status" id="status_4">สำเร็จ</a></div>
                         <div class="txt"><p class="url">15 ม.ค. 2566 - 12.00</p></div>
                         
                         <div class="txt detail-dropdown-wrapper">
@@ -154,8 +275,8 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 10px;" class="card-status">
-                        <div class="txt"><a>อัสคาบัน</a> <a class="status" id="status_4">ไม่อนุมัติ</a></div>
+                    <div style="margin-top: 10px;" class="card-status" data-status="rejected">
+                        <div class="txt"><a>อัสคาบัน</a> <a class="status" id="status_3">ไม่อนุมัติ</a></div>
                         <div class="txt"><p class="url">32 ม.ค. 2670 - 25.00</p></div>
                         
                         <div class="txt detail-dropdown-wrapper">
@@ -194,7 +315,7 @@
         <script src="js/navigation.js"></script>
         <script src="js/select2.js"></script>
         <script src="js/liff-login.js"></script>
-        <script></script>
+         <script src="js/history.js"></script>
     </div>
 </body>
 </html>
