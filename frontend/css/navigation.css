@@ -30,6 +30,9 @@
 .nav-item.active {
     color: #4285f4;
     font-weight: bold;
+    background-color: #ECF4FF;
+    border-radius: 50px;
+    padding: 5px;
 }
 
 .nav-icon {

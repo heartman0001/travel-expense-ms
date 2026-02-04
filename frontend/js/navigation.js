@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const navHTML = `
         <nav class="bottom-nav">
             <a href="index.html" class="nav-item" data-page="index">
-                <img class="nav-icon" src="img/icon/list.png" width="24px" height="24px">
+                <img class="nav-icon" src="img/icon/document.png" width="24px" height="24px">
                 <span>ประวัติ</span>
             </a>
             <a href="withdraw.html" class="nav-item" data-page="withdraw">
-                <img class="nav-icon" src="img/icon/withdraw.png" width="24px" height="24px">
+                <img class="nav-icon" src="img/icon/sack-dollar.png" width="24px" height="24px">
                 <span>เบิกเงิน</span>
             </a>
             <a href="profile.html" class="nav-item" data-page="profile">
-                <img class="nav-icon" src="img/icon/profile.png" width="24px" height="24px">
+                <img class="nav-icon" src="img/icon/user_1.png" width="24px" height="24px">
                 <span>โปรไฟล์</span>
             </a>
         </nav>

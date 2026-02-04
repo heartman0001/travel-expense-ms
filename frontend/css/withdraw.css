@@ -1,6 +1,7 @@
 body{
     display: flex;
     justify-content: center;
+    background-color: #f9f9f9 !important;
 }
 .background-blue {
     position: relative;
@@ -13,7 +14,8 @@ body{
     text-align: center;
 }
 body::before{
-    background-image: url('../img/bg-bottom.png'); /* เปลี่ยน path ให้ตรงกับที่เก็บรูป */
+    /* background-image: url('../img/bg-bottom.png'); */
+    background-image: none;
     margin-top: 20%;
     position: fixed;
 }
@@ -114,8 +116,10 @@ button{
     width: 100%;
     max-width: 450px;
     min-height: auto;
-    /* border: 1px solid #eee; */
+    border: 1px solid #eee;
     padding: 0 25px 40px;
+    height: 95vh;
+    background-color: white;
 }
 @media (max-height:667px) {
     .background-blue{
